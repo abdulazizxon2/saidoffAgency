@@ -33,7 +33,7 @@ export default function Navbar() {
         className={`left-0 right-0  z-10 w-full transition-all duration-500 fixed top-0`}
       >
         <div>
-          <div className={` max-md:hidden  bg-inherit backdrop-blur`}>
+          <div className={`z-10 max-md:hidden  bg-inherit backdrop-blur`}>
             <div className="container max-w-[1440px] mx-auto">
               <div className="flex items-center  justify-between px-20 py-2 rounded-full bg-green relative">
                 <div className="flex gap-10 items-center">
