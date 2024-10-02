@@ -2,26 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*800*/
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../public/font/Montserrat-ExtraBold.ttf") format("opentype");
+}
+/*700*/
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../public/font/Montserrat-Bold.ttf") format("opentype");
+}
+/*500*/
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../public/font/Montserrat-Medium.ttf") format("opentype");
+}
+/*400*/
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../public/font/Montserrat-Regular.ttf") format("opentype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*Europa*/ /*400*/
+@font-face {
+  font-family: "EuropaGroteskSH-Ex";
+  src: url("../public/font/GroteskMedium.ttf") format("opentype");
+}
+/*Europa*/ /*250*/
+@font-face {
+  font-family: "EuropaGroteskSH-XLig";
+  src: url("../public/font/GroteskMedium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "MonumentExtended-Light";
+  src: url("../public/font/PPMonumentExtended-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "MonumentExtended-Bold";
+  src: url("../public/font/PPMonumentExtended-Black.otf") format("opentype");
+}
+
+.monument-b {
+  font-family: "MonumentExtended-Bold", sans-serif !important;
+}
+
+/*800*/
+h1 {
+  font-family: "MonumentExtended-Light", sans-serif !important;
+}
+/*700*/
+h2 {
+  font-family: "Montserrat-Bold", sans-serif !important;
+}
+/*500*/
+h3 {
+  font-family: "Montserrat-Medium", sans-serif !important;
+}
+/*400*/
+p {
+  font-family: "Montserrat-Regular", sans-serif !important;
+}
+
+/*Europa Grotesk */ /*400*/
+h4 {
+  font-weight: 400;
+  font-family: "EuropaGroteskSH-Ex", sans-serif !important;
+}
+
+/*Europa Grotesk */ /*250*/
+h5 {
+  font-weight: 200;
+  font-family: "EuropaGroteskSH-XLig", sans-serif !important;
+}
+.custom-shadow {
+  @apply shadow-none; /* Reset any default shadows */
+  box-shadow: -4px -6px 0px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+.responsive-icon {
+  width: 72px;
+  height: 72px;
+}
+
+@media (max-width: 768px) {
+  .responsive-icon {
+    width: 36px;
+    height: 36px;
+    color: ;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
