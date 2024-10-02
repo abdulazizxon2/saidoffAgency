@@ -59,7 +59,7 @@ export default function OverviewSuggestions() {
 
   return (
     <div>
-      <div className="container relative mx-auto md:min-h-[100vh] max-w-[1440px] mt-40">
+      <div className="container relative mx-auto md:min-h-[100vh] max-w-[1440px] mt-20">
         {/* Background Images */}
         <div className="absolute w-full top-0 h-full inset-0 object-fill z-[-1]">
           <Image src={Backgrounds} alt="img" className="max-md:hidden" />
