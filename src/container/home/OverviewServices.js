@@ -84,7 +84,7 @@ export default function OverviewServices() {
             </div>
           </div>
           <div className="flex justify-center gap-14 max-md:flex-col">
-            <div className="flex flex-col w-full px-8 pl-20">
+            <div className="flex flex-col w-full px-8 md:pl-20 max-md:mr-10">
               <div className="w-[490px] max-md:w-full text-xl font-medium">
                 <p className="max-md:hidden">
                   G‘oyadan boshlab biznes rejani amalga oshirishgacha bo‘lgan
