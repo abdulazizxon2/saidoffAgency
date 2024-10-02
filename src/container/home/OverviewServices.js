@@ -84,7 +84,7 @@ export default function OverviewServices() {
             </div>
           </div>
           <div className="flex justify-center gap-14 max-md:flex-col">
-            <div className="flex flex-col w-full px-8 pl-20">
+            <div className="flex flex-col w-full px-8 md:pl-20">
               <div className="w-[490px] max-md:w-full text-xl font-medium">
                 <p className="max-md:hidden">
                   G‘oyadan boshlab biznes rejani amalga oshirishgacha bo‘lgan
@@ -103,7 +103,7 @@ export default function OverviewServices() {
                   >
                     <button
                       onClick={() => toggleMenu(service.id)}
-                      className={`flex relative z-10 justify-between items-center rounded-[35px] w-full px-4 ${
+                      className={`flex relative justify-between items-center rounded-[35px] w-full px-4 ${
                         isOpen(service.id) ? "bg-black" : "bg-transparent"
                       } transition-colors duration-300`}
                     >
@@ -160,9 +160,9 @@ export default function OverviewServices() {
               <div >
                 <Image src={Quality} alt="img" className="object-cover rounded-3xl h-[485px] max-md:h-full"/>
               </div>
-              <div className="flex flex-col gap-6 w-full">
+              <div className="flex flex-col gap-10 w-full">
                 <div className="flex flex-col bg-black text-white rounded-3xl">
-                  <p className="px-6 pt-10 text-base max-md:text-xs ">
+                  <p className="px-5 pt-10 text-sm max-md:text-xs ">
                     Lorem ipsum dolor sit amet consectetur. Aliquet at don
                   </p>
                   <button className="flex px-5 pt-16 max-md:pt-8 pb-7 max-md:pb-5 items-center justify-between">
@@ -173,7 +173,7 @@ export default function OverviewServices() {
                   </button>
                 </div>
                 <div className="flex  flex-col bg-green text-white rounded-3xl">
-                  <p className="px-6 pt-10 text-black text-base max-md:text-xs">
+                  <p className="px-5 pt-10 text-black text-sm max-md:text-xs">
                     Lorem ipsum dolor sit amet consectetur. Aliquet at don
                   </p>
                   <button className="flex px-5 pt-16 max-md:pt-8 pb-7  max-md:pb-5 items-center justify-between">
