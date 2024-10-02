@@ -10,25 +10,30 @@ export default function OverviewChoose() {
       <div className="container mx-auto mb-20">
         <div className="flex max-md:flex-col max-md:gap-5 mt-60 justify-around items-center px-20 ">
           <div className="">
-            <h1 className="font-extrabold text-4xl max-md:text-2xl">
+            {/* <h2 className="relative right-12 md:hidden bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
+              About us
+            </h2> */}
+            <h1 className="font-extrabold text-4xl max-md:text-xl">
               Nima Uchun{" "}
               <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
                 <span className="inline-block transform skew-x-12">Bizni</span>
               </span>
-                <span className="max-md:hidden">Tanlashinggiz kerak</span>
+              <span className="max-md:hidden">Tanlashinggiz kerak</span>
             </h1>
-            <h1 className="flex gap-3 font-extrabold md:hidden text-4xl max-md:text-2xl"><span>Tanlashinggiz</span> <span>kerak</span></h1>
+            <h1 className="flex gap-3 font-extrabold md:hidden text-4xl max-md:text-xl">
+              <span>Tanlashinggiz</span> <span>kerak</span>
+            </h1>
           </div>
           <div className="w-4/5 max-md:w-full max-md:text-center">
-            <p className="text-lg">
+            <p className="text-lg max-md:text-base">
               Har bir loyihada yangi yondashuv, yuqori sifat, tezkor va
               ishonchli xizmat ko‘rsatamiz. Biz bilan ishlash sizga
               muvaffaqiyatni va innovatsion dunyoni ochadi.
             </p>
           </div>
         </div>
-        <div className="relative right-20 max-md:right-11 bottom-16">
-          <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
+        <div className=" relative right-20 max-md:right-8 md:bottom-16 max-md:bottom-48">
+          <h2 className="bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
             About us
           </h2>
         </div>
@@ -39,12 +44,12 @@ export default function OverviewChoose() {
           <div>
             <Image src={ChooseIMG} alt="img" className="max-md:hidden" />
           </div>
-          <div className="relative md:hidden top-80 right-5">
+          <div className="relative md:hidden top-64 right-5">
             <Star1 />
           </div>
           <div className="flex flex-col gap-4">
             <Image src={ChooseIMG2} alt="img" />
-            <Image src={ChooseIMG} alt="img" className="md:hidden"/>
+            <Image src={ChooseIMG} alt="img" className="md:hidden" />
             <Image src={ChooseIMG2} alt="img" />
           </div>
         </div>

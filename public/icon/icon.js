@@ -32,8 +32,8 @@ export const Stark = () => (
 );
 export const Star1 = () => (
   <svg
-    width="100"
-    height="100"
+    width="90"
+    height="90"
     viewBox="0 0 176 176"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -171,10 +171,48 @@ export const Arrow = () => (
     />
   </svg>
 );
+export const ArrowX = () => (
+  <svg
+    width="23"
+    height="24"
+    viewBox="0 0 31 34"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    
+  >
+    <path
+      d="M27.9768 12.9102L16.8903 22.9888L5.80371 12.9102"
+      stroke="black"
+      stroke-width="2.01573"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
 export const Arrow1 = () => (
   <svg
     width="31"
     height="33"
+    viewBox="0 0 31 33"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M27.9768 20.2812L16.8903 10.2026L5.80371 20.2812"
+      stroke="black"
+      stroke-width="2.01573"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+export const Arrow1L = () => (
+  <svg
+    width="23"
+    height="24"
     viewBox="0 0 31 33"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

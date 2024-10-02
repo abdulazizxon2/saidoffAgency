@@ -58,28 +58,30 @@ export default function OverviewSuggestions() {
   ];
 
   return (
-    <div className="relative">
-      {/* Background Image */}
-      <div className="container relative mx-auto max-w-[1440px] mt-40">
+    <div>
+      <div className="container relative mx-auto md:min-h-[100vh] max-w-[1440px] mt-40">
+        {/* Background Images */}
         <div className="absolute w-full top-0 h-full inset-0 object-fill z-[-1]">
-          <Image src={Backgrounds} alt="img" className="hidden md:block" />
-          <Image src={Backgroundd} alt="img" className="block md:hidden w-full" />
+          <Image src={Backgrounds} alt="img" className="max-md:hidden" />
+          <Image
+            src={Backgroundd}
+            alt="img"
+            className="md:hidden w-full "
+          />
         </div>
-      </div>
 
-      {/* Content Section */}
-      <div className="relative z-[1]">
-        <div className="relative top-60 max-md:top-80 max-md:right-10">
-          <div className="pl-20 flex flex-col justify-center items-center">
-            <h1 className="text-5xl max-md:text-3xl font-extrabold text-white">
+        {/* Header Section */}
+        <div className="relative top-60 max-md:top-[290px] px-10">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-5xl max-md:text-2xl font-extrabold text-white">
               Bizda siz uchun{" "}
             </h1>
-            <h1 className="bg-green text-black text-6xl max-md:text-4xl font-extrabold px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
+            <h1 className="bg-green text-black text-6xl max-md:text-3xl font-extrabold px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
               <span className="inline-block transform skew-x-12">
                 Takliflar bor
               </span>
             </h1>
-            <div className="text-white w-2/4 text-lg max-md:text-base max-md:w-full max-md:pb-10 text-center mt-20">
+            <div className="text-white md:w-2/4 text-lg max-md:text-base max-md:w-full max-md:pb-10 text-center mt-20">
               <p>
                 To‘g‘ri tanlangan yechim – muvaffaqiyat kaliti. Har bir biznes
                 o‘ziga mos ko‘makni topishi kerak, va biz sizning
@@ -90,9 +92,9 @@ export default function OverviewSuggestions() {
           </div>
         </div>
 
-        {/* Pricing Section */}
-        <div className="relative z-[1] top-80">
-          <div className="max-md:grid md:flex justify-center items-center gap-8">
+        {/* Plans Section */}
+        <div className="mt-[380px] md:mb-20 flex max-md:mt-80 justify-center">
+          <div className="grid md:grid-cols-3 gap-8 max-md:relative">
             {plans.map((plan, index) => (
               <div
                 key={index}
@@ -157,9 +159,6 @@ export default function OverviewSuggestions() {
             ))}
           </div>
         </div>
-
-        {/* Add extra padding to prevent overlap */}
-        <div className=""></div>
       </div>
     </div>
   );

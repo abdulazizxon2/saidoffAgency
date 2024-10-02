@@ -23,6 +23,8 @@ export default function OverviewPartners() {
           <div className="pl-20">
             <h1 className="text-4xl max-md:text-2xl font-extrabold">
               Bizga Ishongan{" "}
+            </h1>
+            <h1 className="text-4xl max-md:text-2xl font-extrabold">
               <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
                 <span className="inline-block transform skew-x-12">
                   Hamkorlar
@@ -30,8 +32,8 @@ export default function OverviewPartners() {
               </span>
             </h1>
           </div>
-          <div className="relative right-24 max-md:right-16 ml-2 bottom-12">
-            <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
+          <div className="relative right-24 max-md:right-12 ml-2 max-md:ml-[4px] bottom-12">
+            <h2 className="bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
               Our Clients
             </h2>
           </div>

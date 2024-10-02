@@ -77,21 +77,21 @@ export default function OverviewServices() {
                 </h1>
               </div>
             </div>
-            <div className="relative right-24 max-md:right-16 ml-2 max-md:ml-3 bottom-16">
-              <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
-                Coworkers
+            <div className="relative right-24 max-md:right-12 ml-2 max-md:ml-[5px]   bottom-16">
+              <h2 className="bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
+              Our Service
               </h2>
             </div>
           </div>
           <div className="flex justify-center gap-14 max-md:flex-col">
-            <div className="flex flex-col w-3/4 pl-20">
+            <div className="flex flex-col w-full px-8 pl-20">
               <div className="w-[490px] max-md:w-full text-xl font-medium">
                 <p className="max-md:hidden">
                   G‘oyadan boshlab biznes rejani amalga oshirishgacha bo‘lgan
                   davrda sizning biznesingizni muvaffaqiyatli boshlab,
                   boshqarish uchun barcha xizmatlarni taklif etamiz.
                 </p>
-                <p className="md:hidden">
+                <p className="md:hidden text-center text-base">
                 Biznesingizni muvaffaqiyatli boshlash va boshqarish uchun barcha xizmatlarni taklif etamiz.
                 </p>
               </div>
@@ -162,22 +162,22 @@ export default function OverviewServices() {
               </div>
               <div className="flex flex-col gap-6 w-full">
                 <div className="flex flex-col bg-black text-white rounded-3xl">
-                  <p className="px-6 pt-10 text-md max-md:text-[13px]">
+                  <p className="px-6 pt-10 text-base max-md:text-xs ">
                     Lorem ipsum dolor sit amet consectetur. Aliquet at don
                   </p>
-                  <button className="flex px-8 pt-16 max-md:pt-10 pb-7 items-center justify-between">
-                    <h1 className="text-xl">Batafsil</h1>
+                  <button className="flex px-5 pt-16 max-md:pt-8 pb-7 max-md:pb-5 items-center justify-between">
+                    <h1 className="text-xl max-md:text-base">Batafsil</h1>
                     <div className="bg-italy rounded-full">
                       <Arrow5 />
                     </div>
                   </button>
                 </div>
                 <div className="flex  flex-col bg-green text-white rounded-3xl">
-                  <p className="px-6 pt-10 text-black text-md max-md:text-[13px]">
+                  <p className="px-6 pt-10 text-black text-base max-md:text-xs">
                     Lorem ipsum dolor sit amet consectetur. Aliquet at don
                   </p>
-                  <button className="flex px-5 pt-16 max-md:pt-10 pb-7 items-center justify-between">
-                    <h1 className="text-black text-xl">Partfolio</h1>
+                  <button className="flex px-5 pt-16 max-md:pt-8 pb-7  max-md:pb-5 items-center justify-between">
+                    <h1 className="text-black text-xl max-md:text-base">Partfolio</h1>
                     <div className="bg-white rounded-full">
                       <Arrow6 />
                     </div>

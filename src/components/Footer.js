@@ -19,40 +19,46 @@ export default function Footer() {
 
   return (
     <div>
-      {/* Social Icons */}
-      <div className="bg-black flex items-center justify-center max-md:gap-8 gap-24 pt-16 pb-24">
-        {socialIcons.map(({ Icon, hoverColor }, index) => (
-          <div
-            key={index}
-            className={`${hoverColor} hover:scale-110 hover:rounded-full p-2 transition duration-300 ease-in-out`}
-          >
-            <Icon />
-          </div>
-        ))}
-      </div>
+      <div className="bg-black">
+        {/* Social Icons */}
+        <div className=" flex items-center justify-center max-md:gap-7 gap-24 pt-16 pb-24 max-md:pb-16">
+          {socialIcons.map(({ Icon, hoverColor }, index) => (
+            <div
+              key={index}
+              className={`${hoverColor} hover:scale-110 hover:rounded-full p-2 transition duration-300 ease-in-out`}
+            >
+              <Icon />
+            </div>
+          ))}
+        </div>
 
-      {/* Footer Links */}
-      <div className="flex justify-center items-center bg-black max-md:gap-8 max-md:text-base gap-28 text-lg pb-32 text-white">
-        {footerLinks.map((link, index) => (
-          <Link href={link.href} key={index}>
-            <p className="hover:text-green transition duration-300 ease-in-out cursor-pointer">
-              {link.name}
-            </p>
-          </Link>
-        ))}
-      </div>
+        {/* Footer Links */}
+        <div className="flex justify-center items-center max-md:gap-7 max-md:text-base gap-28 text-lg pb-32 max-md:pb-20 text-white">
+          {footerLinks.map((link, index) => (
+            <Link href={link.href} key={index}>
+              <p className="hover:text-green transition duration-300 ease-in-out cursor-pointer">
+                {link.name}
+              </p>
+            </Link>
+          ))}
+        </div>
 
-      {/* Contact Info */}
-      <div className="text-3xl text-white flex flex-col gap-12 bg-black justify-center items-center">
-        <p className="max-md:text-xl">Bog'lanish</p>
-        <h3 className="tracking-widest font-black text-4xl max-md:text-3xl">+998 95 181 0330</h3>
-        <h1 className="max-md:text-xl">saidoffagency@gmail.com</h1>
-      </div>
+        {/* Contact Info */}
+        <div className="text-3xl text-white flex flex-col gap-12  justify-center items-center">
+          <p className="max-md:text-xl">Bog'lanish</p>
+          <h3 className="tracking-widest font-black text-4xl max-md:text-3xl">
+            +998 95 181 0330
+          </h3>
+          <h1 className="max-md:text-xl">saidoffagency@gmail.com</h1>
+        </div>
 
-      {/* Footer Branding */}
-      <div className="flex flex-col justify-center items-center bg-black text-white pt-16">
-        <p className="max-md:text-base">© 2024 All Rights Reserved</p>
-        <h1 className="text-9xl max-md:text-4xl font-bold pb-5 pt-5">Saidoff Group</h1>
+        {/* Footer Branding */}
+        <div className="flex flex-col justify-center items-center  text-white pt-16">
+          <p className="max-md:text-base">© 2024 All Rights Reserved</p>
+          <h1 className="text-9xl max-md:text-3xl font-bold pb-5 pt-5">
+            Saidoff Group
+          </h1>
+        </div>
       </div>
     </div>
   );

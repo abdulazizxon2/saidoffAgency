@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import fon from "../../../public/img/Frame 107 (1).png";
 // import fon1 from "../../../public/img/Frame 107 (2).png";
 import Image from "next/image";
@@ -6,8 +6,11 @@ import grupIMG from "../../../public/img/headerimg1.png";
 import grupIMG2 from "../../../public/img/headerimg2.png";
 import grupIMG3 from "../../../public/img/headerimg3.png";
 import grupIMG4 from "../../../public/img/headerimg4.png";
+import Modal from "@/src/components/Modal";
 
 export default function OverviewHeader() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="relative h-[120vh] md:h-100vh lg:max-h-[1038px] py-[100px]">
       <div className="container mx-auto h-full">
@@ -51,12 +54,12 @@ export default function OverviewHeader() {
             </p>
           </div>
           <div>
-            <button className="bg-green md:hidden px-14 py-4 text-base font-bold shadow-inner rounded-3xl custom-shadow">
+            <button onClick={() => setShowModal(true)} className="bg-green md:hidden px-14 py-4 text-base font-bold shadow-inner rounded-3xl custom-shadow">
               Bog’lanish
             </button>
           </div>
         </div>
-        <div className="relative w-full flex items-center justify-center top-20">
+        <div className="relative w-full flex items-center justify-center top-20 max-md:top-28">
           <div className="flex justify-center items-center absolute h-[175px] md:h-[320px]">
             <Image
               src={grupIMG4}
@@ -94,6 +97,8 @@ export default function OverviewHeader() {
             className="absolute w-full top-0 h-full inset-0 object-fill z-[-1]"
           />
         </div> */}
+              <Modal showModal={showModal} setShowModal={setShowModal} /> 
+
       </div>
     </div>
   );

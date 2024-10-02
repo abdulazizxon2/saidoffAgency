@@ -11,17 +11,17 @@ import OverviuwGroup from "@/src/container/home/OverviuwGroup";
 // import localFont from "next/font/local";
 
 export default function Home() {
+  
   return (
     <div>
       <main>
-        <div className="conatiner mx-auto overflow-hidden relative">
-          {/* <Modal/> */}
+        <div className="conatiner mx-auto overflow-hidden ">
           <Navbar />
           <OverviewHeader />
           <OverviewChoose />
           <OverviewServices/>
           <OverviewPartners/>
-          <OverviewSuggestions/>x``
+          <OverviewSuggestions/>
           <OverviuwGroup/>
           <OverviewFaq/>
           <Footer/>

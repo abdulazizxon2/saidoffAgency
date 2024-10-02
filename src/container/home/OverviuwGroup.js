@@ -9,7 +9,7 @@ import Image from "next/image";
 export default function OverviuwGroup() {
   return (
     <div>
-      <div className="container mx-auto mt-52">
+      <div className="container  mx-auto mt-52">
         {/* <div className="max-md:absolute"> */}
           <div>
             {" "}
@@ -21,8 +21,8 @@ export default function OverviuwGroup() {
                 </span>
               </h1>
             </div>
-            <div className="relative right-24 max-md:right-16 ml-2 max-md:ml-3 bottom-28">
-              <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
+            <div className="relative right-24  max-md:right-12 ml-2 max-md:ml-[5px] bottom-28">
+              <h2 className="bg-green px-3 py-[3px] text-xl  max-md:text-base inline-block -rotate-90 rounded-lg">
                 Coworkers
               </h2>
             </div>
