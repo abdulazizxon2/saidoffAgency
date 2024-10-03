@@ -14,8 +14,8 @@ export default function OverviuwGroup() {
           <div>
             {" "}
             <div className="pl-20">
-              <h1 className="text-4xl max-md:text-3xl font-extrabold">Bizni Professional </h1>
-              <h1 className="text-4xl max-md:text-3xl  bg-green px-3 pb-3 font-extrabold inline-block transform -skew-x-12 rounded-lg">
+              <h1 className="text-4xl max-md:text-2xl font-extrabold">Bizni Professional </h1>
+              <h1 className="text-4xl max-md:text-2xl  bg-green px-3 pb-3 font-extrabold inline-block transform -skew-x-12 rounded-lg">
                 <span className="inline-block transform skew-x-12">
                   Jamoamiz
                 </span>

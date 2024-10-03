@@ -42,7 +42,7 @@ export default function OverviewFaq() {
       <div className="container mx-auto">
         <div className="flex justify-center items-center w-3/4 mx-auto text-center">
           <div>
-            <h1 className="font-extrabold text-4xl max-md:text-2xl">
+            <h1 className="font-extrabold text-4xl max-md:text-xl">
               Sizda Savvollar Bo’lsa, Bizda{" "}
               <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
                 <span className="inline-block transform skew-x-12">

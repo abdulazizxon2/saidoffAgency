@@ -64,7 +64,7 @@ export default function OverviewServices() {
           <div>
             <div className="pl-20">
               <div className="w-2/4">
-                <h1 className="font-extrabold text-4xl max-md:text-2xl">
+                <h1 className="font-extrabold text-4xl max-md:text-xl">
                  <span className="max-md:flex">
                  Bizning{" "}
                   <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
@@ -73,7 +73,7 @@ export default function OverviewServices() {
                     </span>
                   </span>
                  </span>
-                  <span className="font-extrabold text-4xl max-md:text-2xl">Xizmatlar</span>
+                  <span className="font-extrabold text-4xl max-md:text-xl">Xizmatlar</span>
                 </h1>
               </div>
             </div>

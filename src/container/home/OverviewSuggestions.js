@@ -73,10 +73,10 @@ export default function OverviewSuggestions() {
         {/* Header Section */}
         <div className="relative top-60 max-md:top-[290px] px-10">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-5xl max-md:text-2xl font-extrabold text-white">
+            <h1 className="text-5xl max-md:text-xl font-extrabold text-white">
               Bizda siz uchun{" "}
             </h1>
-            <h1 className="bg-green text-black text-6xl max-md:text-3xl font-extrabold px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
+            <h1 className="bg-green text-black text-6xl max-md:text-2xl font-extrabold px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
               <span className="inline-block transform skew-x-12">
                 Takliflar bor
               </span>

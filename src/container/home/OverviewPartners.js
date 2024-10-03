@@ -21,7 +21,7 @@ export default function OverviewPartners() {
         <div>
           {" "}
           <div className="pl-20">
-            <h1 className="text-4xl max-md:text-2xl font-extrabold">
+            <h1 className="text-4xl max-md:text-xl font-extrabold">
               Bizga Ishongan{" "}
             </h1>
             <h1 className="text-4xl max-md:text-2xl font-extrabold">
