@@ -15,7 +15,7 @@ export default function Modal({ showModal, setShowModal }) {
   // Scroll stop
   useEffect(() => {
     if (showModal) {
-      document.body.style.overflow = "hidden";x
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
