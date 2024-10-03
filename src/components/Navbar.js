@@ -128,16 +128,16 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="flex items-center md:hidden justify-between px-3 py-3 mx-auto bg-inherit backdrop-blur ">
+        <div className="flex items-center md:hidden  justify-between px-3 py-3 mx-auto bg-inherit backdrop-blur ">
           <button onClick={toggleMenu} className="bg-green rounded-lg p-[4px]">
             <Hamburger />
           </button>
           <div>
             <Link href={"/"}>
-              <h2 className="text-3xl text-white">Saidoff</h2>
+              <h2 className="text-3xl text-white right-32 bottom-4 -z-10 absolute">Saidoff</h2>
             </Link>
           </div>
-          <div className="bg-green rounded-lg">
+          <div className="bg-green rounded-lg ">
             {!showLanguages ? (
               <button
                 onClick={() => setShowLanguages(!showLanguages)}
@@ -147,7 +147,7 @@ export default function Navbar() {
               </button>
             ) : (
               <div
-                className={`flex  origin-top transition-transform transform ${
+                className={`flex  origin-top z-10  transition-transform transform ${
                   showLanguages ? "scale-y-100" : "scale-y-0"
                 } duration-300 ease-out`}
               >
