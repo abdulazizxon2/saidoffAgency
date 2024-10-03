@@ -2,8 +2,6 @@ import { Close } from "@/public/icon/icon";
 import React, { useEffect } from "react";
 
 export default function Modal({ showModal, setShowModal }) {
-  if (!showModal) return null;
-
   const closeModal = () => {
     setShowModal(false);
   };
@@ -14,16 +12,18 @@ export default function Modal({ showModal, setShowModal }) {
     }
   };
 
+  // Scroll stop
   useEffect(() => {
     if (showModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "hidden";x
     }
+
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; 
     };
   }, [showModal]);
+
+  if (!showModal) return null;
 
   return (
     <div>
