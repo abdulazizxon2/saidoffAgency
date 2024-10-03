@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="flex justify-center items-center max-md:gap-7 max-md:text-base gap-28 text-lg pb-32 max-md:pb-20 text-white">
+        <div className="flex justify-center items-center max-md:gap-7 max-md:text-sm gap-28 text-lg pb-32 max-md:pb-20 text-white">
           {footerLinks.map((link, index) => (
             <Link href={link.href} key={index}>
               <p className="hover:text-green transition duration-300 ease-in-out cursor-pointer">
@@ -49,7 +49,7 @@ export default function Footer() {
           <h3 className="tracking-widest font-black text-4xl max-md:text-3xl">
             +998 95 181 0330
           </h3>
-          <h1 className="max-md:text-xl">saidoffagency@gmail.com</h1>
+          <h1 className="max-md:text-lg">saidoffagency@gmail.com</h1>
         </div>
 
         {/* Footer Branding */}

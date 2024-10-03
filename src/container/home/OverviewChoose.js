@@ -8,7 +8,7 @@ export default function OverviewChoose() {
   return (
     <div>
       <div className="container mx-auto mb-20">
-        <div className="flex max-md:flex-col max-md:gap-5 mt-60 justify-around items-center px-20 ">
+        <div className="flex max-md:flex-col max-md:gap-5 mt-60 justify-around items-center md:px-20 ">
           <div className="">
             {/* <h2 className="relative right-12 md:hidden bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
               About us
@@ -24,7 +24,7 @@ export default function OverviewChoose() {
               <span>Tanlashinggiz</span> <span>kerak</span>
             </h1>
           </div>
-          <div className="w-4/5 max-md:w-full max-md:text-center">
+          <div className="md:w-4/5 max-md:px-3 max-md:w-full max-md:text-center">
             <p className="text-lg max-md:text-base">
               Har bir loyihada yangi yondashuv, yuqori sifat, tezkor va
               ishonchli xizmat ko‘rsatamiz. Biz bilan ishlash sizga
