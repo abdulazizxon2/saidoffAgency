@@ -134,38 +134,38 @@ export default function Navbar() {
           </button>
           <div>
             <Link href={"/"}>
-              <h2 className="text-3xl text-white right-32 bottom-4 -z-10 absolute">Saidoff</h2>
+              <h2 className="text-3xl text-white  bottom-4 -z-10 ">Saidoff</h2>
             </Link>
           </div>
           <div className="bg-green rounded-lg ">
-            {!showLanguages ? (
+            <div className="bg-green rounded-lg flex items-center relative">
+              {/* Globus tugmachasi */}
               <button
                 onClick={() => setShowLanguages(!showLanguages)}
-                className="px-[4px] cursor-pointer py-[4px]"
+                className="px-[6px] cursor-pointer py-[4px]"
               >
                 <Globe />
               </button>
-            ) : (
-              <div
-                className={`flex z-10  origin-top  transition-transform transform ${
-                  showLanguages ? "scale-y-100" : "scale-y-0"
-                } duration-300 ease-out`}
-              >
-                {["Uz", "Ru", "Eng"].map((lang, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleLanguageClick(lang)}
-                    className={`${
-                      selectedLanguage === lang
-                        ? "bg-black text-white"
-                        : "text-black"
-                    } font-bold py-[5px] px-[5px] m-[5px] rounded-lg hover:px-[4px] hover:py-[4px] hover:border-[1px] hover:border-black transition duration-200`}
-                  >
-                    {lang}
-                  </button>
-                ))}
-              </div>
-            )}
+
+              {/* Til tanlash opsiyalari */}
+              {showLanguages && (
+                <div className="absolute right-0 top-full mt-1 bg-green rounded-lg shadow-lg z-50 flex flex-col gap-1">
+                  {["Uz", "Ru", "Eng"].map((lang, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleLanguageClick(lang)}
+                      className={`${
+                        selectedLanguage === lang
+                          ? "bg-black text-white"
+                          : "text-black"
+                      } font-bold py-[5px] px-[8px] mx-[3px] my-[3px] rounded-lg hover:mx-[2px] hover:my-[2px] hover:border-[1px] hover:border-black transition duration-200`}
+                    >
+                      {lang}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

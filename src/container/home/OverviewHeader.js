@@ -14,7 +14,7 @@ export default function OverviewHeader() {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

@@ -49,7 +49,7 @@ const services = [
 export default function OverviewServices() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

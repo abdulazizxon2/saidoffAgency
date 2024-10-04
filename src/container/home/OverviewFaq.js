@@ -40,7 +40,7 @@ export default function OverviewFaq() {
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

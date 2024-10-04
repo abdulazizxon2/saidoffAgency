@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 export default function OverviuwGroup() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

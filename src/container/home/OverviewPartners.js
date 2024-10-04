@@ -20,7 +20,7 @@ import Marquee from "react-fast-marquee";
 export default function OverviewPartners() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

@@ -61,7 +61,7 @@ export default function OverviewSuggestions() {
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
 

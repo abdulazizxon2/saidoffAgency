@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 export default function OverviewChoose() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1500,
     });
   }, []);
   return (
