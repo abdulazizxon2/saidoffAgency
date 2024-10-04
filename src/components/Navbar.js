@@ -1,9 +1,7 @@
 import Star, { Close, Globe, Hamburger } from "@/public/icon/icon";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "./Modal";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Navbar() {
   const [showLanguages, setShowLanguages] = useState(false);
@@ -27,17 +25,12 @@ export default function Navbar() {
   ];
 
   const [showModal, setShowModal] = useState(false);
-  
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-  }, []);
+
   return (
     <div>
       {/* LG NAVBAR */}
       <div
-        data-aos="fade-down" className={`left-0 right-0  z-10 w-full transition-all duration-500 fixed top-0`}
+        className={`left-0 right-0  z-10 w-full transition-all duration-500 fixed top-0`}
       >
         <div>
           <div className={`z-10 max-md:hidden  bg-inherit backdrop-blur`}>
@@ -135,16 +128,16 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <div className="flex items-center md:hidden justify-between px-3 py-3 mx-auto bg-inherit backdrop-blur">
+        <div className="flex items-center md:hidden  justify-between px-3 py-3 mx-auto bg-inherit backdrop-blur ">
           <button onClick={toggleMenu} className="bg-green rounded-lg p-[4px]">
             <Hamburger />
           </button>
           <div>
             <Link href={"/"}>
-              <h2 className="text-3xl text-white  bottom-4 -z-10 ">Saidoff</h2>
+              <h2 className="text-3xl text-white right-32 bottom-4 -z-10 absolute">Saidoff</h2>
             </Link>
           </div>
-          <div className="bg-green  rounded-lg ">
+          <div className="bg-green rounded-lg ">
             {!showLanguages ? (
               <button
                 onClick={() => setShowLanguages(!showLanguages)}
@@ -154,7 +147,7 @@ export default function Navbar() {
               </button>
             ) : (
               <div
-                className={`flex absolute right-32 origin-top z-10  transition-transform transform ${
+                className={`flex z-10  origin-top  transition-transform transform ${
                   showLanguages ? "scale-y-100" : "scale-y-0"
                 } duration-300 ease-out`}
               >
