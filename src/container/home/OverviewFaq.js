@@ -1,11 +1,12 @@
 import { Arrow, Arrow1, Arrow1L, ArrowX } from "@/public/icon/icon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function OverviewFaq() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
- 
-  const [openIndex, setOpenIndex] = useState(0); 
+  const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
@@ -37,27 +38,35 @@ export default function OverviewFaq() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div>
       <div className="container mx-auto">
-        <div className="flex justify-center items-center w-3/4 mx-auto text-center">
-          <div>
-            <h1 className="font-extrabold text-4xl max-md:text-xl">
-              Sizda Savvollar Bo’lsa, Bizda{" "}
-              <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
-                <span className="inline-block transform skew-x-12">
-                  Javoblar Bor
+        <div data-aos="fade-down">
+          <div className="flex justify-center items-center w-3/4 mx-auto text-center">
+            <div>
+              <h1 className="font-extrabold text-4xl max-md:text-xl">
+                Sizda Savvollar Bo’lsa, Bizda{" "}
+                <span className="bg-green px-3 py-[3px] inline-block transform -skew-x-12 rounded-lg">
+                  <span className="inline-block transform skew-x-12">
+                    Javoblar Bor
+                  </span>
                 </span>
-              </span>
-            </h1>
+              </h1>
+            </div>
+          </div>
+          <div className="relative right-16 max-md:right-6 ml-2 bottom-16">
+            <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
+              FAQ
+            </h2>
           </div>
         </div>
-        <div className="relative right-16 max-md:right-6 ml-2 bottom-16">
-          <h2 className="bg-green px-3 py-[3px] text-xl inline-block -rotate-90 rounded-lg">
-            FAQ
-          </h2>
-        </div>
-        <div className="mt-10 mb-20">
+        <div data-aos="fade-up" className="mt-10 mb-20">
           {/* FAQ Section */}
           <div className="space-y-4 max-md:px-10">
             {faqs.map((faq, index) => {
@@ -70,12 +79,14 @@ export default function OverviewFaq() {
                     className="flex justify-between items-center cursor-pointer "
                     onClick={() => toggleFAQ(index)}
                   >
-                    <h2 className="text-xl max-md:text-base font-medium">{faq.question}</h2>
+                    <h2 className="text-xl max-md:text-base font-medium">
+                      {faq.question}
+                    </h2>
                     <div className="max-md:hidden">
-                    {openIndex === index ? <Arrow /> : <Arrow1 />}
+                      {openIndex === index ? <Arrow /> : <Arrow1 />}
                     </div>
                     <div className="md:hidden">
-                    {openIndex === index ? <ArrowX /> : <Arrow1L />}
+                      {openIndex === index ? <ArrowX /> : <Arrow1L />}
                     </div>
                   </div>
                   <div
@@ -85,7 +96,9 @@ export default function OverviewFaq() {
                         : "max-h-0 opacity-0"
                     } overflow-hidden`}
                   >
-                    <p className="text-gray-600 text-lg max-md:text-sm pb-2">{faq.answer}</p>
+                    <p className="text-gray-600 text-lg max-md:text-sm pb-2">
+                      {faq.answer}
+                    </p>
                   </div>
                 </div>
               );

@@ -1,7 +1,9 @@
 import { Arrow3, Arrow4, Arrow5, Arrow5X, Arrow6, Arrow6L } from "@/public/icon/icon";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Quality from "../../../public/img/Rectangle 191 (1).png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const services = [
   {
@@ -45,6 +47,12 @@ const services = [
 ];
 
 export default function OverviewServices() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   const [openMenu, setOpenMenu] = useState(null);
   const accordionRef = useRef([]);
 
@@ -61,7 +69,7 @@ export default function OverviewServices() {
   return (
     <div>
       <div className="container mx-auto mt-24 mb-20">
-          <div>
+          <div data-aos="fade-down-right">
             <div className="pl-20">
               <div className="w-2/4">
                 <h1 className="font-extrabold text-4xl max-md:text-xl">
@@ -77,14 +85,14 @@ export default function OverviewServices() {
                 </h1>
               </div>
             </div>
-            <div className="relative right-24 max-md:right-12 ml-2 max-md:ml-[5px]   bottom-16">
+            <div className="relative right-24 max-md:right-12 ml-2 max-md:ml-[5px]   bottom-14">
               <h2 className="bg-green px-3 py-[3px] text-xl max-md:text-base inline-block -rotate-90 rounded-lg">
               Our Service
               </h2>
             </div>
           </div>
           <div className="flex justify-center gap-14 max-md:flex-col">
-            <div className="flex flex-col w-full px-8 md:pl-20">
+            <div data-aos="fade-down-right" className="flex flex-col w-full px-8 md:pl-20">
               <div className="w-[490px] max-md:w-full text-xl font-medium">
                 <p className="max-md:hidden">
                   G‘oyadan boshlab biznes rejani amalga oshirishgacha bo‘lgan
@@ -156,7 +164,7 @@ export default function OverviewServices() {
                 ))}
               </div>
             </div>
-            <div className="flex gap-5 max-md:p-4">
+            <div data-aos="fade-down-left" className="flex gap-5 max-md:p-4">
               <div >
                 <Image src={Quality} alt="img" className="object-cover rounded-3xl h-[485px] max-md:h-full"/>
               </div>

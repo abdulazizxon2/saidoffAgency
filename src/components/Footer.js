@@ -1,6 +1,9 @@
 import { Facebook, Instagram, LinkedIn, Telegram } from "@/public/icon/icon";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 export default function Footer() {
   const socialIcons = [
@@ -17,11 +20,17 @@ export default function Footer() {
     { name: "Portfolio", href: "/Portfolio" },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div>
       <div className="bg-black">
         {/* Social Icons */}
-        <div className=" flex items-center justify-center max-md:gap-7 gap-24 pt-16 pb-24 max-md:pb-16">
+        <div data-aos="fade-right" className=" flex items-center justify-center max-md:gap-7 gap-24 pt-16 pb-24 max-md:pb-16">
           {socialIcons.map(({ Icon, hoverColor }, index) => (
             <div
               key={index}
@@ -33,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="flex justify-center items-center max-md:gap-7 max-md:text-sm gap-28 text-lg pb-32 max-md:pb-20 text-white">
+        <div data-aos="fade-left" className="flex justify-center items-center max-md:gap-7 max-md:text-sm gap-28 text-lg pb-32 max-md:pb-20 text-white">
           {footerLinks.map((link, index) => (
             <Link href={link.href} key={index}>
               <p className="hover:text-green transition duration-300 ease-in-out cursor-pointer">
@@ -44,7 +53,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Info */}
-        <div className="text-3xl text-white flex flex-col gap-12  justify-center items-center">
+        <div data-aos="fade-right" className="text-3xl text-white flex flex-col gap-12  justify-center items-center">
           <p className="max-md:text-xl">Bog'lanish</p>
           <h3 className="tracking-widest font-black text-4xl max-md:text-3xl">
             +998 95 181 0330
@@ -53,7 +62,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Branding */}
-        <div className="flex flex-col justify-center items-center  text-white pt-16">
+        <div data-aos="fade-left" className="flex flex-col justify-center items-center  text-white pt-16">
           <p className="max-md:text-base">© 2024 All Rights Reserved</p>
           <h1 className="text-9xl max-md:text-3xl font-bold pb-5 pt-5">
             Saidoff Group

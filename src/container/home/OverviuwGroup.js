@@ -1,32 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Group1 from "../../../public/img/agent.png";
 import Group2 from "../../../public/img/agent(1).png";
 import Group3 from "../../../public/img/agent(2).png";
 import Group4 from "../../../public/img/agent(3).png";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function OverviuwGroup() {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div>
       <div className="container  mx-auto mt-52">
         {/* <div className="max-md:absolute"> */}
-          <div>
-            {" "}
-            <div className="pl-20">
-              <h1 className="text-4xl max-md:text-2xl font-extrabold">Bizni Professional </h1>
-              <h1 className="text-4xl max-md:text-2xl  bg-green px-3 pb-3 font-extrabold inline-block transform -skew-x-12 rounded-lg">
-                <span className="inline-block transform skew-x-12">
-                  Jamoamiz
-                </span>
-              </h1>
-            </div>
-            <div className="relative right-24  max-md:right-12 ml-2 max-md:ml-[5px] bottom-28">
-              <h2 className="bg-green px-3 py-[3px] text-xl  max-md:text-base inline-block -rotate-90 rounded-lg">
-                Coworkers
-              </h2>
-            </div>
+        <div data-aos="fade-right">
+          {" "}
+          <div className="pl-20">
+            <h1 className="text-4xl max-md:text-2xl font-extrabold">
+              Bizni Professional{" "}
+            </h1>
+            <h1 className="text-4xl max-md:text-2xl  bg-green px-3 pb-3 font-extrabold inline-block transform -skew-x-12 rounded-lg">
+              <span className="inline-block transform skew-x-12">Jamoamiz</span>
+            </h1>
           </div>
+          <div className="relative right-24  max-md:right-12 ml-2 max-md:ml-[5px] bottom-28">
+            <h2 className="bg-green px-3 py-[3px] text-xl  max-md:text-base inline-block -rotate-90 rounded-lg">
+              Coworkers
+            </h2>
+          </div>
+        </div>
+        <div data-aos="fade-left">
           <Marquee
             pauseOnHover
             autoFill
@@ -85,6 +94,7 @@ export default function OverviuwGroup() {
               </div>
             </div>
           </Marquee>
+        </div>
         {/* </div> */}
       </div>
     </div>

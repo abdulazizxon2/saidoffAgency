@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Backgrounds from "../../../public/img/Background (1).png";
 import Backgroundd from "../../../public/img/Group 142.png";
 import Image from "next/image";
 import { Complate } from "@/public/icon/icon";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function OverviewSuggestions() {
   const plans = [
@@ -57,6 +59,12 @@ export default function OverviewSuggestions() {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <div>
       <div className="container relative mx-auto md:min-h-[100vh] max-w-[1440px] mt-20">
@@ -71,8 +79,9 @@ export default function OverviewSuggestions() {
         </div>
 
         {/* Header Section */}
-        <div className="relative top-60 max-md:top-[290px] px-10">
+        <div className="relative top-60 max-md:top-[290px] md:px-10 max-md:px-5">
           <div className="flex flex-col justify-center items-center">
+            <div data-aos="fade-right">
             <h1 className="text-5xl max-md:text-xl font-extrabold text-white">
               Bizda siz uchun{" "}
             </h1>
@@ -81,7 +90,8 @@ export default function OverviewSuggestions() {
                 Takliflar bor
               </span>
             </h1>
-            <div className="text-white md:w-2/4 text-lg max-md:text-base max-md:w-full max-md:pb-10 text-center mt-20">
+            </div>
+            <div data-aos="fade-left" className="text-white md:w-2/4 text-lg max-md:text-base max-md:w-full max-md:pb-10 text-center mt-20">
               <p>
                 To‘g‘ri tanlangan yechim – muvaffaqiyat kaliti. Har bir biznes
                 o‘ziga mos ko‘makni topishi kerak, va biz sizning
@@ -93,12 +103,12 @@ export default function OverviewSuggestions() {
         </div>
 
         {/* Plans Section */}
-        <div className="mt-[380px] md:mb-20 flex max-md:mt-80 justify-center">
+        <div data-aos="zoom-out" className="mt-[380px] md:mb-20 flex max-md:mt-80 justify-center">
           <div className="grid md:grid-cols-3 gap-8 max-md:relative">
             {plans.map((plan, index) => (
               <div
                 key={index}
-                className={`p-6 w-80 rounded-3xl shadow-lg ${
+                className={`md:p-6 max-md:p-4 w-80 rounded-3xl shadow-lg ${
                   plan.isHighlighted
                     ? "bg-black text-white border-2 border-green"
                     : "bg-white text-black"
