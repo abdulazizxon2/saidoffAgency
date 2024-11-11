@@ -1,4 +1,4 @@
-import { Facebook, Instagram, LinkedIn, Telegram } from "@/public/icon/icon";
+import { Facebook, Instagram, LinkedIn, Telegram } from "../../public/icon/icon";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -22,7 +22,8 @@ export default function Footer() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 3000,
+      once: false,
     });
   }, []);
 

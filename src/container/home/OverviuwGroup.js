@@ -12,6 +12,7 @@ export default function OverviuwGroup() {
   useEffect(() => {
     AOS.init({
       duration: 1500,
+      once: false,
     });
   }, []);
 

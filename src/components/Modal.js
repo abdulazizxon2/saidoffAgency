@@ -1,7 +1,15 @@
 import { Close } from "@/public/icon/icon";
 import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Modal({ showModal, setShowModal }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   const closeModal = () => {
     setShowModal(false);
   };
@@ -29,6 +37,7 @@ export default function Modal({ showModal, setShowModal }) {
     <div>
       <div onClick={handleClick} className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
         <form
+         data-aos="fade-right" 
           onClick={(e) => e.stopPropagation()} 
           className="flex flex-col gap-6 rounded-2xl bg-blacc md:w-3/4 max-md:w-full max-md:mx-6 p-10"
         >

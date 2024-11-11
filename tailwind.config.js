@@ -18,7 +18,9 @@ module.exports = {
         blacc: "rgba(34, 34, 34, 1)",
         ingrey: "rgba(130, 130, 130, 1)",
         lights:"rgba(0, 0, 0, 0.63)",
-
+        night:"rgba(74, 74, 74, 1)",
+        suns:"#f0f0f0",
+        cloud:"rgba(222, 222, 222, 1)"
       },
       boxShadow: {
         custom: "-4px -6px 0px 0px rgba(0, 0, 0, 0.3) inset",

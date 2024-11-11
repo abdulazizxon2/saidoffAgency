@@ -10,6 +10,7 @@ import React from 'react'
 export default function AboutUs() {
   return (
     <div>
+      <div className='conatiner mx-auto overflow-hidden '>
       <Navbar/>
       <AboutHeader/>
       <AboutSertificate/>
@@ -17,6 +18,7 @@ export default function AboutUs() {
       <OverviuwGroup/>
       <OverviewFaq/>
       <Footer/>
+      </div>
     </div>
   )
 }

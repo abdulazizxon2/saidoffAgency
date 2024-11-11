@@ -62,13 +62,13 @@ export default function OverviewSuggestions() {
   useEffect(() => {
     AOS.init({
       duration: 1500,
+      once: false,
     });
   }, []);
 
   return (
     <div>
       <div className="container relative mx-auto md:min-h-[100vh] max-w-[1440px] mt-20">
-        {/* Background Images */}
         <div className="absolute w-full top-0 h-full inset-0 object-fill z-[-1]">
           <Image src={Backgrounds} alt="img" className="max-md:hidden" />
           <Image
@@ -78,7 +78,6 @@ export default function OverviewSuggestions() {
           />
         </div>
 
-        {/* Header Section */}
         <div className="relative top-60 max-md:top-[290px] md:px-10 max-md:px-5">
           <div className="flex flex-col justify-center items-center">
             <div data-aos="fade-right">
@@ -102,7 +101,6 @@ export default function OverviewSuggestions() {
           </div>
         </div>
 
-        {/* Plans Section */}
         <div data-aos="zoom-out" className="mt-[380px] md:mb-20 flex max-md:mt-80 justify-center">
           <div className="grid md:grid-cols-3 gap-8 max-md:relative">
             {plans.map((plan, index) => (
